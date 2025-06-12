@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form method="post">
+    <div class="card" style="width: 20rem;left: 38vw;
+    top: 23vh;font-size: larger;">
+        <div class="card-body">
+            <h5 class="card-title"> Please Sign In</h5>
+            <div class="form-floating"> <input type="text" class="form-control" id="floatingInput"
+                    placeholder="name@example.com" name="username"> <label for="floatingInput">Username</label> </div>
+            <div class="form-floating"> <input type="password" name="password" class="form-control" id="floatingPassword"
+                    placeholder="Password"> <label for="floatingPassword">Password</label> </div>
+            <button type="submit" class="btn btn-primary w-100">Sign In</button>
+            <a href="{{ url_for('register') }}" class="card-link">Don't have a account? Register</a>
+        </div>
+    </div>
+</form>
+{% endblock %}

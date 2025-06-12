@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{%block style%}
+<style>
+  form{
+    margin-left:100px;
+  }
+  input{
+    border-radius:7px;
+    margin:6px;
+    padding:3px;
+    width:40%;
+  }
+  button{
+    border-radius:5px;
+    margin:6px;
+  }
+  h3{
+    margin-top:122px;
+  }
+  .request_a_ride>h3{
+    padding-left:106px;
+  }
+  .container{
+    display:flex;
+    color:white;
+  }
+  .request_a_ride{
+    width:50%;
+  }
+  .ride_requests{
+    width:50%;
+  }
+  body{
+   background-color:#06021b;
+  }
+</style>
+{%endblock%}
+{% block content %}
+<div class="container">
+  <div class="request_a_ride">
+<h3>Request a Ride</h3>
+<form method="post" action="{{ url_for('request_ride') }}">
+  <input name="pickup"  placeholder="Pickup" class="pickup" required>
+<br>
+  <input name="destination" placeholder="Destination" required>
+  <br>
+  <button type="submit">Book A Ride</button>
+</form>
+</div>
+  <div class="ride_requests">
+<h3>Your Ride Requests</h3>
+<ul>
+  {% for ride in rides %}
+    <li>{{ ride.pickup }} → {{ ride.destination }} | Status: {{ ride.status }}</li>
+  {% endfor %}
+</ul>
+    </div>
+</div>
+
+{% endblock %}

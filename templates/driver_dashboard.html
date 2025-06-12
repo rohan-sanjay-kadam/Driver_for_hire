@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{%block style%}
+<style>
+  h3{
+    margin-top:15px;
+    margin-left:20px;
+    color:white;
+  }
+  body{
+   background-color:#06021b;
+  }
+  ul{
+    color:white;
+  }
+</style>
+{%endblock%}
+{% block content %}
+<h3>Available Rides</h3>
+<ul>
+  {% for ride in rides %}
+    <li>
+      {{ ride.pickup }} → {{ ride.destination }} |
+      <a href="{{ url_for('accept_ride', ride_id=ride.id) }}">Accept</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}
