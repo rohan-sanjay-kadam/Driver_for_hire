@@ -26,19 +26,19 @@ A simple ride-matching web application built using Flask, SQLAlchemy, and Jinja2
 
 # 🏁 Getting Started
 
- 1. Clone the Repository
+1. Clone the Repository: `git clone https://github.com/rohan-sanjay-kadam/Driver_for_hire.git`
+  
+2. `cd Driver_for_hire`
 
-  git clone https://github.com/rohan-sanjay-kadam/Driver_for_hire.git
-  cd Driver_for_hire
+3. Setup A Virtual Environment:
+   `python -m venv venv`
+4. Activate The Virtual Environment:
+   `source venv/bin/activate`  # On Windows: `venv\Scripts\activate`
 
-2. Setup A Virtual Environment
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-3. Install Dependencies
-   pip install -r requirements.txt
+5. Install Dependencies:
+   `pip install -r requirements.txt`
    OR
-   pip install Flask Flask-Bcrypt Flask-SQLAlchemy
+   `pip install Flask Flask-Bcrypt Flask-SQLAlchemy`
 
-4. Run The App
-   python app.py
+6. Run The App:
+   `python app.py`
