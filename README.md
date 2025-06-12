@@ -28,8 +28,8 @@ A simple ride-matching web application built using Flask, SQLAlchemy, and Jinja2
 
  1. Clone the Repository
 
-git clone https://github.com/rohan-sanjay-kadam/Driver_for_hire.git
-cd Driver_for_hire
+  git clone https://github.com/rohan-sanjay-kadam/Driver_for_hire.git
+  cd Driver_for_hire
 
 2. Setup A Virtual Environment
    python -m venv venv
